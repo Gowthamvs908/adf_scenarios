@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfsecprc"
+		},
+		"Adls2adf_ls_accountKey": {
+			"value": ""
+		},
+		"databricks_adf_accessToken": {
+			"value": ""
+		},
+		"Adls2adf_ls_properties_typeProperties_url": {
+			"value": "https://spotifyadlspractice.dfs.core.windows.net/"
+		},
+		"databricks_adf_properties_typeProperties_existingClusterId": {
+			"value": "0217-064100-geekf9uq"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

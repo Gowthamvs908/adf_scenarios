@@ -1,0 +1,70 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfsecprc"
+		},
+		"Adls2adf_ls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Adls2adf_ls'"
+		},
+		"databricks_adf_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'databricks_adf'"
+		},
+		"Adls2adf_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://spotifyadlspractice.dfs.core.windows.net/"
+		},
+		"databricks_adf_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0217-064100-geekf9uq"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfsecprc_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"Adls2adf_ls_accountKey": {
+						"value": "[parameters('Adls2adf_ls_accountKey')]"
+					},
+					"databricks_adf_accessToken": {
+						"value": "[parameters('databricks_adf_accessToken')]"
+					},
+					"Adls2adf_ls_properties_typeProperties_url": {
+						"value": "[parameters('Adls2adf_ls_properties_typeProperties_url')]"
+					},
+					"databricks_adf_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('databricks_adf_properties_typeProperties_existingClusterId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
