@@ -1,0 +1,9 @@
+{
+	"name": "adfsecprc",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "27c67178-1644-4230-aecf-cf52b6ce4d5f",
+		"tenantId": "0467a502-14b0-47cd-b4db-7142d154fdeb"
+	}
+}

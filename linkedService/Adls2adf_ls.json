@@ -1,0 +1,12 @@
+{
+	"name": "Adls2adf_ls",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://spotifyadlspractice.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDA0M0Q4OUZDLTJDQjctNDZCNS1BNDI4LUYwMUIwRDVBRUFBOF9iNTU1Mjk0Yy0xZTFjLTQxNGQtYjg3NC1jZmE2NGY0N2RmNjYiDQp9"
+		}
+	}
+}
