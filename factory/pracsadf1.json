@@ -1,0 +1,9 @@
+{
+	"name": "pracsadf1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "303d2d32-1de4-4cfb-ad16-b6353faee3d4",
+		"tenantId": "92428b9c-87e0-48d9-996c-a31358071df1"
+	}
+}
